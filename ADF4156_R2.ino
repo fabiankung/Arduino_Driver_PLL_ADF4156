@@ -95,7 +95,8 @@ void loop()
   nSendData_ADF41XX(0x306C8180,32);   // N = 217, m = 50 
   //nSendData_ADF41XX(0x306B8000,32);   // N = 215, m = 0
   delay(1); // A short delay for the PLL chip to lock.
-  
+
+  // User routines
   while (1)
   {
     // Uncomment and comment as needed.
