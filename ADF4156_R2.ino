@@ -124,14 +124,14 @@ void loop()
     // --- Large sweep 10 MHz ---
     delay(1000);
     CheckMuxOut();
-    digitalWrite(PIN_TRIGGER, HIGH);
-    nSendData_ADF41XX(0x306C8180,32);   // N = 217, m = 50     
-    digitalWrite(PIN_TRIGGER, LOW);
+    digitalWrite(PIN_TRIGGER, HIGH);    // Optional, to trigger oscilloscope.
+    nSendData_ADF41XX(0x306C8180,32);   // N = 217, m = 50, M = 100, fref = 4 MHz.     
+    digitalWrite(PIN_TRIGGER, LOW);     // fvco = 870 MHz.
     delay(1000);
     CheckMuxOut();
-    digitalWrite(PIN_TRIGGER, HIGH);
-    nSendData_ADF41XX(0x306B8000,32);   // N = 215, m = 0
-    digitalWrite(PIN_TRIGGER, LOW);
+    digitalWrite(PIN_TRIGGER, HIGH);    // Optional, to trigger oscilloscope.
+    nSendData_ADF41XX(0x306B8000,32);   // N = 215, m = 0, M =100, fref = 4 MHz.
+    digitalWrite(PIN_TRIGGER, LOW);     // fvco = 860 MHz.
     
   }
 }
